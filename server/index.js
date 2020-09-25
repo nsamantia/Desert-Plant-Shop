@@ -4,6 +4,9 @@ const session = require('express-session')
 const massive = require('massive')
 const authCtrl = require('./authController')
 const plntCtrl = require('./controller')
+const cctiCtrl = require('./cactiController')
+const succCtrl = require('/succsController')
+
 // const verifyUser = require('./middlewares/verifyUser')
 
 const app = express()
@@ -29,6 +32,13 @@ app.get('/api/auth/user', authCtrl.getUser)
 
 
 //plants endpoints
+app.get('/api/plants', plntCtrl.getPlants)
+
+//cacti endpoints
+app.get('/api/cacti', cctiCtrl.getCacti)
+
+//succlents endpoints
+app.get('/api/succs', succCtrl.getSuccs)
 
 
 massive({
