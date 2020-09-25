@@ -6,7 +6,7 @@ module.exports = {
     const db = req.app.get('db')
 
         //Desconstruct from body
-        const {email, password } = req.body
+        const {username, password } = req.body
         // checks for existing user
         const [user] = await db.check_user([username])
         //if exists, reject request
@@ -22,14 +22,14 @@ module.exports = {
         //put new user on session
         req.session.user = newUser
 
-        res.status.send(req.session.user)
+        res.status(200).send(req.session.user)
     },
     login: async (req, res) => {
 
         const db = req.app.get('db')
 
         //get email and password from body
-        const {email, password} = req.body
+        const {username, password} = req.body
 
         //checks for existing user
         const [existingUser] = await db.check_user([username])

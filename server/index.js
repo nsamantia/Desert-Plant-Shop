@@ -30,6 +30,7 @@ app.get('/api/auth/user', authCtrl.getUser)
 
 //plants endpoints
 
+
 massive({
     connectionString: CONNECTION_STRING,
     ssl: {rejectUnauthorized: false}
