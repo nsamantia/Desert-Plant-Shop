@@ -5,7 +5,7 @@ const massive = require('massive')
 const authCtrl = require('./authController')
 const plntCtrl = require('./controller')
 const cctiCtrl = require('./cactiController')
-const succCtrl = require('/succsController')
+const succCtrl = require('./succsController')
 
 // const verifyUser = require('./middlewares/verifyUser')
 
@@ -31,7 +31,7 @@ app.get('/api/auth/user', authCtrl.getUser)
 
 
 
-//plants endpoints
+//all plants endpoints
 app.get('/api/plants', plntCtrl.getPlants)
 
 //cacti endpoints

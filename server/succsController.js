@@ -6,7 +6,7 @@ const getAllSuccs = async (db) => {
 module.exports = {
     getSuccs: async (req, res) => {
         const db = req.app.get('db')
-        const plants = await getAllSuccs(db)
+        const succs = await getAllSuccs(db)
         res.status(200).send(succs)
     }
 }
