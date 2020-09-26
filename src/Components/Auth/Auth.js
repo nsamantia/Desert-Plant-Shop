@@ -1,11 +1,12 @@
 import React, {Component} from 'react'
+import axios from 'axios'
 
 class Auth extends Component{
     constructor(){
         super()
         this.state = {
             username: '',
-            passsword: ''
+            password: ''
         }
     }
 
@@ -19,18 +20,41 @@ class Auth extends Component{
          })
         
     }
+
+    handleRegister = () =>{
+        const {username, password} = this.state
+        axios
+            .post('/api/auth/register', {username, password})
+            .then((res) => {
+                // this.props.loginUser(res.data)
+                this.props.history.push('/Landing/Landing')
+            })
+    }
+
+    handleLogin = () => {
+        const {username, password} = this.state
+        axios
+            .post('/api/auth/login', {username, password})
+            .then((res) =>{
+                this.props.history.push('/Landing/Landing')
+            })
+    }
+
     render(){
     return(
         <div className = "auth">
-            <div classname ="auth-input-container">
-            <lable>Username:</lable>
-            <input name="username" onChange={(e) => {this.handleInput(e)}}></input>
-            <label>Password:</label>
-            <input name="password" onChange={(e) => {this.handleInput(e)}}></input>
 
+            <div className="auth-input-container">
+            <input name="username" placeholder="Username" onChange={(e) => {this.handleInput(e)}}></input>
+            <input name="password" placeholder="Password" onChange={(e) => {this.handleInput(e)}}></input>
             </div>
 
+            <div className="auth-button-container">
+                <button onClick={() => {this.handleLogin()}}>Login</button>
+                <button onClick={() => {this.handleRegister()}}>Register</button>
             </div>
+
+        </div>
     )
     }
 }
