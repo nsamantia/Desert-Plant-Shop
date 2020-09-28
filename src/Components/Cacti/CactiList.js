@@ -6,7 +6,7 @@ const CactiList = (props) => {
     return(
         <div>
             
-            <img src={props.image}/>
+            <img src={props.image} alt="A cactus in a pot"/>
            <p>{props.name}</p>
            <p>{props.price}</p>
            

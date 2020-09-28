@@ -46,12 +46,9 @@ class Cacti extends Component{
         return(
             
             <div>
-                
-                Cacti.js
 
                 {mappedCacti}
-                 
-                
+
             </div>
         )
     }

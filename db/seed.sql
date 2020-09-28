@@ -19,6 +19,7 @@ CREATE TABLE plants (
     img TEXT,
     price DECIMAL,
     quantity INT,
+    content VARCHAR (300),
     plant_type_id INT REFERENCES plant_type(plant_type_id)
     
 );
