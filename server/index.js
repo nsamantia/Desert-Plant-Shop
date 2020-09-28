@@ -43,10 +43,11 @@ app.get('/api/succs', succCtrl.getSuccs)
 
 massive({
     connectionString: CONNECTION_STRING,
-    ssl: {rejectUnauthorized: false}
+    ssl: {rejectUnauthorized: false},
 }).then(dbInstance => {
     app.set('db', dbInstance)
     console.log('DB ready!')
     app.listen(SERVER_PORT, () =>
-    console.log(`Server ready on port ${SERVER_PORT}`))
+    console.log(`Server ready on port ${SERVER_PORT}`)
+    )
 })
