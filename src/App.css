@@ -9,3 +9,21 @@
 .succs-listing-input{
   width: 150px;
 }
+
+.nav-container{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  
+}
+
+ul{
+  display: flex;
+  list-style-type: none;
+  
+}
+
+li{
+  padding: 15px;
+  
+}

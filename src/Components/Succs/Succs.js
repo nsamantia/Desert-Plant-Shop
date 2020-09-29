@@ -1,6 +1,7 @@
 import React, {Component} from 'react'
 import axios from 'axios'
 import SuccsList from './SuccsList'
+import Nav from '../Nav/Nav'
 
 class Succs extends Component{
     constructor(){
@@ -39,6 +40,8 @@ class Succs extends Component{
 
         return(
             <div>
+                <Nav />
+
                 Succs.js
                 {mappedSuccs}
             </div>

@@ -1,6 +1,7 @@
 import React, {Component} from 'react'
 import axios from 'axios'
 import CactiList from './CactiList'
+import Nav from '../Nav/Nav'
 class Cacti extends Component{
     constructor(){
         super() 
@@ -46,7 +47,9 @@ class Cacti extends Component{
         return(
             
             <div>
-                    
+                <Nav />
+                
+                Cacti.js
                 {mappedCacti}
 
             </div>
