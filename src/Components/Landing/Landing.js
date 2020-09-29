@@ -1,5 +1,7 @@
 import React, {Component} from 'react'
 import '../../App.css'
+import {connect} from 'react-redux'
+import {getUser} from '../../ducks/authReducer'
 import {Link} from 'react-router-dom'
 import Nav from '../Nav/Nav'
 
@@ -8,9 +10,17 @@ import Nav from '../Nav/Nav'
 class Landing extends Component{
     constructor(){
         super()
+        this.state ={}
         
     }
 
+    componentDidMount() {
+        if(!this.props.isLoggedIn) {
+            this.props.getUser().catch((err) => {
+                this.props.history.push('/')
+            })
+        }
+    }
 
     render(){
         return (
@@ -26,4 +36,6 @@ class Landing extends Component{
     }
 }
 
-export default Landing
+const mapStateToProps = (reduxState) => reduxState
+
+export default connect(mapStateToProps, {getUser})(Landing)
