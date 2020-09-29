@@ -2,6 +2,7 @@ import React, {Component} from 'react'
 import axios from 'axios'
 import {loginUser} from '../../ducks/authReducer'
 import {connect} from 'react-redux'
+
 class Auth extends Component{
     constructor(){
         super()
@@ -44,8 +45,9 @@ class Auth extends Component{
 
     render(){
     return(
-        <div className = "auth">
 
+        <div className = "auth">
+            
             <div className="auth-input-container">
             <input name="username" placeholder="Username" onChange={(e) => {this.handleInput(e)}}></input>
             <input name="password" placeholder="Password" onChange={(e) => {this.handleInput(e)}}></input>

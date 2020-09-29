@@ -21,7 +21,7 @@ export function loginUser(user){
 
 export function logoutUser(){
     return {
-        type: LOGIN_USER,
+        type: LOGOUT_USER,
         payload: null
     }
 }
@@ -45,7 +45,7 @@ export default function(state = initialState, action){
         case GET_USER + '_PENDING':
             return{...state}
         case GET_USER + '_FULFILLED':
-            return {...state, user: action.payload.data,isLoggin:true}
+            return {...state, user: action.payload.data, isLoggedIn:true}
         case GET_USER + '_REJECTED':
             return initialState
         default:
