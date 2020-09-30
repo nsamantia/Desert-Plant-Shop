@@ -1,4 +1,6 @@
 import React from 'react'
+import {addToCart} from '../../ducks/cartReducer'
+import {connect} from 'react-redux'
 
 
 const CactiList = (props) => {
@@ -9,9 +11,11 @@ const CactiList = (props) => {
             <img src={props.image} alt="A cactus in a pot"/>
            <p>{props.name}</p>
            <p>{props.price}</p>
+           <button onClick={(e) => {props.addToCart(props.cactiListing)}}>Add To Cart</button>
            
         </div>
     )
 }
+const mapStateToProps = (reduxState) => reduxState
 
-export default CactiList
+export default connect(mapStateToProps, {addToCart})(CactiList)

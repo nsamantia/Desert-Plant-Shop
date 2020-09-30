@@ -38,6 +38,7 @@ class Cacti extends Component{
                     name={element.name}
                     price={element.price}
                     image={element.img}
+
                 />
                 
                 
