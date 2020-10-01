@@ -3,7 +3,7 @@ import {addToCart} from '../../ducks/cartReducer'
 import {connect} from 'react-redux'
 
 const SuccsList = (props) => {
-    console.log(props)
+    
     return(
         <div>
             <img src={props.image} alt="A Succulent in a pot" />

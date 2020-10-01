@@ -4,7 +4,7 @@ import {connect} from 'react-redux'
 
 
 const CactiList = (props) => {
-    console.log(props)
+    
     return(
         <div>
             

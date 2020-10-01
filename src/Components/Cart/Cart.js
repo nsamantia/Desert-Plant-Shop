@@ -1,15 +1,24 @@
 import React from 'react'
 import Nav from '../Nav/Nav'
 import {connect} from 'react-redux'
+import CartList from './CartList'
 
 const Cart = (props) => {
 
     const mappedCart = props.cart.cart.map((element) => {
         return(
-            <div>
-                <p>{element.name}</p>
+            
+                <CartList
+                cartListing = {element}
+                key={element.id}
+                name={element.name}
+                price={element.price}
+                image={element.img}
+                quantity={element.quantity}
+                />
+                
 
-            </div>
+           
         )
     })
     
@@ -18,6 +27,9 @@ const Cart = (props) => {
             <Nav />
             Cart.js
             {mappedCart}
+            <div>
+                <button>Checkout</button>
+            </div>
         </div>
     )
 }
