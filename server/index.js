@@ -6,12 +6,15 @@ const authCtrl = require('./authController')
 const plntCtrl = require('./controller')
 const cctiCtrl = require('./cactiController')
 const succCtrl = require('./succsController')
+const strpCtrl = require('./stripeController')
+const stripe = require('stripe')('SECRET_KEY');
+
 
 // const verifyUser = require('./middlewares/verifyUser')
 
 const app = express()
 
-const{CONNECTION_STRING, SERVER_PORT, SESSION_SECRET} = process.env
+const{CONNECTION_STRING, SERVER_PORT, SESSION_SECRET, SECRET_KEY } = process.env
 
 app.use(express.json())
 app.use(
@@ -40,6 +43,9 @@ app.get('/api/cacti', cctiCtrl.getCacti)
 //succlents endpoints
 app.get('/api/succs', succCtrl.getSuccs)
 
+
+//stripe endpoints
+app.post('/stripe/checkout', strpCtrl.checkout)
 
 massive({
     connectionString: CONNECTION_STRING,
