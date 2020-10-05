@@ -1,5 +1,6 @@
 import React, {Component} from 'react'
 import axios from 'axios'
+import './Auth.scss'
 import {loginUser} from '../../ducks/authReducer'
 import {connect} from 'react-redux'
 

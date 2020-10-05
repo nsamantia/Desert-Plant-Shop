@@ -27,7 +27,7 @@ module.exports = {
              currency: 'usd',
              receipt_email: token.email,
              description: 'Checkout Charge',
-             source: tok_id,
+             token: token.card.token,
              shipping: {
                 name: token.card.name,
                 address: {
