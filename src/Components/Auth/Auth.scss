@@ -1,3 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Sansita+Swashed:wght@300&display=swap');
+
+$box-shadow : 0px 4px 20px 0px rgba(0, 0, 0, 0.05);
+
 
 
 *{
@@ -9,26 +13,72 @@
 .auth{
     background-image: url("https://www.jakpost.travel/wimages/large/5-57212_cactus-wallpaper-tumblr-artsy-cool-computer-backgrounds.jpg");
     background-size: fixed;
+    background-repeat: no-repeat;
     height: 100vh;
 }
 
-.auth-input-container{
+.shop-title{
     display: flex;
     justify-content: center;
+    padding: 10px;
+    color: RGB(250, 169, 132);
+    font-family: 'Sansita Swashed', cursive;
+}
+
+
+
+.auth-input-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    
 
     input{
+        
         width: 175px;
         height: 35px;
         border-radius: 4px;
-        background-color: rgba(255, 250, 247, .7);
+        background-color: rgba(250, 195, 172, .45);
         border: none;
+        padding: 5px;
         margin: 10px;
+        margin-top: 50px;
         transition: 0.3s all;
+        font-family: 'Open Sans', sans-serif;
     }
 
     input:hover{
-        background-color: rgb(255, 255, 255);
-        box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.05);
+        background-color: rgba(250, 195, 172, 1);
+        box-shadow: $box-shadow;
 
     }
+}
+
+.auth-button-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+    
+
+    button{
+        width: 375px;
+        height: 35px;
+        margin-top: 10px;
+        border: none;
+        border-radius: 4px;
+        background-color:  rgba(250, 195, 172, 1);
+        font-size: 16px;
+        color: grey;
+        font-family: 'Open Sans', sans-serif;
+
+    }
+
+    button:hover{
+        opacity: 0.6;
+        box-shadow: $box-shadow
+    }
+    
 }

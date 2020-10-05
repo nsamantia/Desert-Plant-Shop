@@ -1,5 +1,6 @@
 import React from 'react'
 import axios from 'axios'
+import './Nav.scss'
 import {connect} from 'react-redux'
 import {logoutUser} from '../../ducks/authReducer'
 import {withRouter} from 'react-router'
@@ -17,12 +18,12 @@ const Nav = (props) => {
     return(
         <div className="nav-container">
             <ul>
-                <Link to='/Landing'><li>Desert Plant Shop</li></Link>
-               <Link to="/Cacti"><li>Cacti</li></Link> 
-                <Link to="/Succs"><li>Succulents</li></Link>
+                <Link to='/Landing'><li className="title-nav">Desert Plant Shop</li></Link>
+                <Link to="/Cacti"><li className="nav-links">Cacti</li></Link> 
+                <Link to="/Succs"><li className="nav-links">Succulents</li></Link>
                                 {/* <li>{props.user.username}</li> */}
-                <li><button onClick={() => {logout()}}>Logout</button></li>
-                <Link to="/Cart"><li>Cart</li></Link>
+                <li><button className="logout-button" onClick={() => {logout()}}>Logout</button></li>
+                <Link to="/Cart"><li className="nav-links">Cart</li></Link>
             </ul>
         </div>
 

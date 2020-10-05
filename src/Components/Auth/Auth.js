@@ -48,15 +48,17 @@ class Auth extends Component{
     return(
 
         <div className = "auth">
-            
-            <div className="auth-input-container">
-            <input name="username" placeholder="Username" onChange={(e) => {this.handleInput(e)}}></input>
-            <input name="password" placeholder="Password" onChange={(e) => {this.handleInput(e)}}></input>
-            </div>
+            <h1 className="shop-title">Desert Plant Shop</h1>
+            <div className = "login-container">
+                <div className="auth-input-container">
+                    <input name="username" placeholder="Username" onChange={(e) => {this.handleInput(e)}}></input>
+                    <input name="password" placeholder="Password" onChange={(e) => {this.handleInput(e)}}></input>
+                </div>
 
-            <div className="auth-button-container">
-                <button onClick={() => {this.handleLogin()}}>Login</button>
-                <button onClick={() => {this.handleRegister()}}>Register</button>
+                <div className="auth-button-container">
+                    <button onClick={() => {this.handleLogin()}}>Login</button>
+                    <button onClick={() => {this.handleRegister()}}>Register</button>
+                </div>
             </div>
 
         </div>
