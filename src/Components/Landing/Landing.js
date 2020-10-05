@@ -28,9 +28,10 @@ class Landing extends Component{
             <div>
                 <Nav />
 
-                <Link to="/Cacti"><button>Cacti</button></Link>
-                <Link to ="/Succs"><button>Succulents</button></Link>
-                
+                <div>
+                    <Link to="/Cacti"><button>Cacti</button></Link>
+                    <Link to ="/Succs"><button>Succulents</button></Link>
+                </div>
             </div>
         )
     }
