@@ -25,10 +25,15 @@ class Landing extends Component{
     render(){
         return (
             
-            <div>
+            <div className="Landing">
                 <Nav />
 
                 <div>
+                    <h1>Desert Plant Shop</h1>
+                    <p></p>
+                </div>
+            
+                <div className="button-container">
                     <Link to="/Cacti"><button>Cacti</button></Link>
                     <Link to ="/Succs"><button>Succulents</button></Link>
                 </div>
