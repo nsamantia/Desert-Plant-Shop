@@ -12,7 +12,7 @@ const CactiList = (props) => {
                 <img className="cacti-img" src={props.image} alt="A cactus in a pot"/>
                 <p className="name-p">{props.name}</p>
                 <p className="price-p">{props.price}</p>
-                <button onClick={(e) => {props.addToCart(props.cactiListing)}}>Add To Cart</button>
+                <button className="cart-button" onClick={(e) => {props.addToCart(props.cactiListing)}}>Add To Cart</button>
            </div>
         </div>
     )
