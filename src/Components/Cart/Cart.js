@@ -45,7 +45,8 @@ const Cart = (props) => {
            token,
            totalPrice: totalPrice(props.cart.cart)
        }
-      const res = await axios.post('/stripe/checkout', body)
+        const res = await axios.post('/stripe/checkout', body)
+        const { status } = res.dataç
       
     
     }
@@ -67,7 +68,7 @@ const Cart = (props) => {
             
             <StripeCheckout
                 stripeKey='pk_test_51HXYqjDeUNmgXOYnaq5czks1BtAJRANDHTRxbBwz3MPWX3KcEDXZgkKH4qNaR2ggaYDx1B60jWIMoSpHOgqGvvq600blttLjhI'
-                token={handleToken}
+                token
                 amount={totalPrice(props.cart.cart) * 100}
                 billingAddress
                 shippingAddress

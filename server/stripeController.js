@@ -12,13 +12,13 @@ module.exports = {
     checkout: async (req, res) => {
         const { totalPrice, token } = req.body
 
-        const source = await stripe.sources.create({
-            customer: 'cus_AFGbOSiITuJVDs',
-            usage: 'reusable',
-            original_source: 'src_19YP2AAHEMiOZZp1Di4rt1K6',
-          }, {
-            stripeAccount: '{{CONNECTED_STRIPE_ACCOUNT_ID}}',
-          });
+        // const source = await stripe.sources.create({
+        //     customer: '',
+        //     usage: 'reusable',
+        //     original_source: 'src_19YP2AAHEMiOZZp1Di4rt1K6',
+        //   }, {
+        //     stripeAccount: '{{CONNECTED_STRIPE_ACCOUNT_ID}}',
+        //   });
 
 
        

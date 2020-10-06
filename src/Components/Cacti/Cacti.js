@@ -1,4 +1,5 @@
 import React, {Component} from 'react'
+import './Cacti.scss'
 import axios from 'axios'
 import CactiList from './CactiList'
 import Nav from '../Nav/Nav'
@@ -49,10 +50,9 @@ class Cacti extends Component{
             
             <div>
                 <Nav />
-                
-                
-                {mappedCacti}
-
+                <div className = "mapped-cacti-container">
+                    {mappedCacti}
+                </div>
             </div>
         )
     }
