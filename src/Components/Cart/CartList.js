@@ -1,5 +1,5 @@
 import React from 'react'
-import './CartList.css'
+import './CartList.scss'
 import {connect} from 'react-redux'
 import {deleteFromCart} from '../../ducks/cartReducer'
 

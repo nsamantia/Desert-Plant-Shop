@@ -1,4 +1,5 @@
 import React, {Component} from 'react'
+import "./Succs.scss"
 import axios from 'axios'
 import SuccsList from './SuccsList'
 import Nav from '../Nav/Nav'

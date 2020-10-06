@@ -59,21 +59,20 @@ const Cart = (props) => {
             <Nav />
             
             {mappedCart}
-            <div>
-               <p>Total: {totalPrice(props.cart.cart)}</p>
-            </div>
+            
             
             <div className='checkout'>
-            <h1 className='total'>{totalPrice(props.cart.cart)}</h1>
-            
-            <StripeCheckout
-                stripeKey='pk_test_51HXYqjDeUNmgXOYnaq5czks1BtAJRANDHTRxbBwz3MPWX3KcEDXZgkKH4qNaR2ggaYDx1B60jWIMoSpHOgqGvvq600blttLjhI'
-                token
-                amount={totalPrice(props.cart.cart) * 100}
-                billingAddress
-                shippingAddress
-                name='Thanks for shopping!'
-            />
+
+                    <p>Total: {totalPrice(props.cart.cart)}</p>
+
+                <StripeCheckout
+                    stripeKey='pk_test_51HXYqjDeUNmgXOYnaq5czks1BtAJRANDHTRxbBwz3MPWX3KcEDXZgkKH4qNaR2ggaYDx1B60jWIMoSpHOgqGvvq600blttLjhI'
+                    token
+                    amount={totalPrice(props.cart.cart) * 100}
+                    billingAddress
+                    shippingAddress
+                    name='Thanks for shopping!'
+                />
             </div>
         </div>
     )

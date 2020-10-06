@@ -1,0 +1,33 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.cart-list-container{
+    display: flex;
+    justify-content: space-around;
+    padding: 15px;
+
+    button{
+        height: 20px;
+        width: 20px;
+    }
+}
+
+.cart-list-img{
+    width: 100px;
+}
+
+.checkout{
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    padding: 20px;
+    margin-right: 50px;
+
+    P{
+        margin-right: 10vw;
+    }
+
+}
