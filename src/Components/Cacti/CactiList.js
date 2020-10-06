@@ -1,4 +1,5 @@
 import React from 'react'
+import './Cacti.scss'
 import {addToCart} from '../../ducks/cartReducer'
 import {connect} from 'react-redux'
 
@@ -6,13 +7,13 @@ import {connect} from 'react-redux'
 const CactiList = (props) => {
     
     return(
-        <div>
-            
-            <img src={props.image} alt="A cactus in a pot"/>
-           <p>{props.name}</p>
-           <p>{props.price}</p>
-           <button onClick={(e) => {props.addToCart(props.cactiListing)}}>Add To Cart</button>
-           
+        <div className = "cacti-list-container">
+            <div className = "item-list">
+                <img className="cacti-img" src={props.image} alt="A cactus in a pot"/>
+                <p className="name-p">{props.name}</p>
+                <p className="price-p">{props.price}</p>
+                <button onClick={(e) => {props.addToCart(props.cactiListing)}}>Add To Cart</button>
+           </div>
         </div>
     )
 }

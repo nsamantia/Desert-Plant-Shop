@@ -1,3 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Sansita+Swashed:wght@300&display=swap');
+
+$text-font: 'Open Sans', sans-serif;
+
 *{
     box-sizing: border-box;
     margin: 0;
@@ -8,16 +12,42 @@
 
 .Landing{
     height: 100vh;
-   
-    
     background-position: 135%;
     background-size: contain;
     background-repeat: no-repeat;
     background-image: url("https://842930.smushcdn.com/1760858/wp-content/uploads/2020/05/oslo-2-20-nature.png?lossy=1&strip=1&webp=1");
-    
     opacity: .75;
     
+    h1{
+        display: flex;
+        justify-content: center;
+        width: 50%;
+        position: absolute;
+        bottom: 60%;
+        font-family: 'Sansita Swashed', cursive;
+        font-size: 46px;
+    }
+
+    .first-p{ 
+        display: flex;
+        justify-content: center;
+        width: 50%;
+        position: absolute;
+        bottom: 55%;
+        font-family: $text-font;
+        font-size: 16px;
+    }
     
+    .second-p{
+        display: flex;
+        justify-content: center;
+        width: 50%;
+        position: absolute;
+        bottom: 50%;
+        font-family: $text-font;
+        font-size: 16px;
+    }
+
 }
 
 .button-container{
@@ -25,7 +55,7 @@
     justify-content: center;
     width: 50%;
     position: absolute;
-    bottom: 300px;
+    bottom: 40%;
 
     button{
         border: none;
@@ -35,5 +65,11 @@
         color: white;
         border-radius: 4px;
         width: 90px;
+        font-family: $text-font;
+        font-size: 14px;
+    }
+
+    button:hover{
+        opacity: .5;
     }
 }

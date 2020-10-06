@@ -30,7 +30,8 @@ class Landing extends Component{
 
                 <div>
                     <h1>Desert Plant Shop</h1>
-                    <p></p>
+                    <p className='first-p'>We are committed to providing high quality drought tolerant plants.</p>
+                    <p className="second-p">All of our plants are grown from seed or cuttings.</p>
                 </div>
             
                 <div className="button-container">

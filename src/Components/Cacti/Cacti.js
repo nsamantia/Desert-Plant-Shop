@@ -50,7 +50,7 @@ class Cacti extends Component{
             <div>
                 <Nav />
                 
-                Cacti.js
+                
                 {mappedCacti}
 
             </div>

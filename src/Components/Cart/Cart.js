@@ -2,7 +2,7 @@ import React from 'react'
 import Nav from '../Nav/Nav'
 import {connect} from 'react-redux'
 import CartList from './CartList'
-import { toast } from 'react-toastify'
+
 import { loadStripe } from '@stripe/stripe-js'
 import StripeCheckout from 'react-stripe-checkout'
 import axios from 'axios'
@@ -38,7 +38,7 @@ const Cart = (props) => {
         return total
     }
 
-    toast.configure()
+   
     
     async function handleToken(token){
        const body = {
@@ -47,12 +47,7 @@ const Cart = (props) => {
        }
       const res = await axios.post('/stripe/checkout', body)
       
-      const { status } = res.data
-      if (status === 'success') {
-          toast('Success!', {type: 'success'})
-      } else {
-          toast('Something went wrong', {type: "error"})
-      }
+    
     }
 
 
@@ -76,7 +71,7 @@ const Cart = (props) => {
                 amount={totalPrice(props.cart.cart) * 100}
                 billingAddress
                 shippingAddress
-                name='Pay With Card'
+                name='Thanks for shopping!'
             />
             </div>
         </div>
