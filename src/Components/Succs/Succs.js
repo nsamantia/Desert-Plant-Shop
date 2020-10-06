@@ -41,9 +41,10 @@ class Succs extends Component{
         return(
             <div>
                 <Nav />
-
-                Succs.js
-                {mappedSuccs}
+                <h2>Succulents</h2>
+                <div className = "mapped-succs-container">
+                    {mappedSuccs}
+                </div>
             </div>
         )
         
