@@ -52,7 +52,11 @@ class Auth extends Component{
             <Nav />
         <div className = "auth">
             
-            <h1 className="shop-title">Please Login</h1>
+            <h1 className="shop-title">Login</h1>
+            <div className="text-container">
+                <p>Please login to view your cart</p>
+                <p>You may also checkout as a guest</p>
+            </div>
             <div className = "login-container">
                 <div className="auth-input-container">
                     <input name="username" placeholder="Username" onChange={(e) => {this.handleInput(e)}}></input>

@@ -75,3 +75,41 @@ $text-font: 'Open Sans', sans-serif;
         opacity: .5;
     }
 }
+
+@media only screen and (max-width: 700px) {
+    .Landing{
+        height: 135vh;
+        
+        h1{
+            position: absolute;
+            top: 12%;
+            width: 100%;
+            font-size: 34px;
+            
+        }
+        .first-p{ 
+            width: 100%;
+            bottom: 73%;
+            font-size: 14px;
+            text-align:center ;
+        }
+        
+        .second-p{
+            width: 100%;
+            bottom: 69%;
+            font-size: 14px;
+        }
+    }
+    
+    
+   
+
+    .button-container{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    position: absolute;
+    bottom: 58%;
+    }
+
+}

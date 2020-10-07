@@ -11,7 +11,7 @@ const Nav = (props) => {
     const logout = () => {
         axios.delete('/api/auth/logout').then(() => {
             props.logoutUser()
-            props.history.push('/Auth')
+            props.history.push('/')
         })
     }
 

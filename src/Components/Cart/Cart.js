@@ -1,5 +1,6 @@
 import React from 'react'
 import Nav from '../Nav/Nav'
+
 import {connect} from 'react-redux'
 import CartList from './CartList'
 
@@ -28,7 +29,7 @@ const Cart = (props) => {
            
         )
     })
-
+    //counts up all price totals 
     const totalPrice = () => {
         let total = 0
         for (let i = 0; i < props.cart.cart.length; i++){
@@ -62,7 +63,7 @@ const Cart = (props) => {
             
             
             <div className='checkout'>
-
+            
                     <p>Total: {totalPrice(props.cart.cart)}</p>
 
                 <StripeCheckout
