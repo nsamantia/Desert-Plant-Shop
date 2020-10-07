@@ -14,13 +14,13 @@ class Landing extends Component{
         
     }
 
-    componentDidMount() {
-        if(!this.props.isLoggedIn) {
-            this.props.getUser().catch((err) => {
-                this.props.history.push('/')
-            })
-        }
-    }
+    // componentDidMount() {
+    //     if(!this.props.isLoggedIn) {
+    //         this.props.getUser().catch((err) => {
+    //             this.props.history.push('/')
+    //         })
+    //     }
+    // }
 
     render(){
         return (

@@ -1,3 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Sansita+Swashed:wght@300&display=swap');
+
+$text-font: 'Open Sans', sans-serif;
+$font-color: rgb(91,91,91);
+$box-shadow : 0px 4px 20px 0px rgba(0, 0, 0, .1);
+
+
 *{
     box-sizing: border-box;
     margin: 0;
@@ -9,6 +16,8 @@
     justify-content: space-around;
     align-items: center;
     padding: 15px;
+    font-family: $text-font;
+    color: $font-color;
 
     img{
         border-radius: 15px;
@@ -21,6 +30,8 @@
         background-color: rgba(76,76,76, .7);
         color: white;
         border-radius: 2px;
+        font-family: $text-font;
+        
     }
 
     button:hover{
@@ -39,5 +50,21 @@
     flex-direction: column;
     padding: 20px;
     margin-right: 50px;
+   
+    p{
+        font-family: $text-font;
+        color: $font-color;
+    }
 
+}
+
+h2{
+    display: flex;
+    justify-content: center;
+    color: $font-color;
+    font-family: 'Sansita Swashed', cursive;
+    font-size: 42px;
+    padding: 10px;
+
+    
 }

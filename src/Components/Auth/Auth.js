@@ -1,8 +1,10 @@
 import React, {Component} from 'react'
 import axios from 'axios'
+import Nav from '../Nav/Nav'
 import './Auth.scss'
 import {loginUser} from '../../ducks/authReducer'
 import {connect} from 'react-redux'
+import {Link} from 'react-router-dom'
 
 class Auth extends Component{
     constructor(){
@@ -30,7 +32,7 @@ class Auth extends Component{
             .post('/api/auth/register', {username, password})
             .then((res) => {
                 this.props.loginUser(res.data)
-                this.props.history.push('/Landing/Landing')
+                this.props.history.push('/Cart/Cart')
             })
     }
 
@@ -40,15 +42,17 @@ class Auth extends Component{
             .post('/api/auth/login', {username, password})
             .then((res) =>{
                 this.props.loginUser(res.data)
-                this.props.history.push('/Landing/Landing')
+                this.props.history.push('/Cart/Cart')
             })
     }
 
     render(){
     return(
-
+        <div>
+            <Nav />
         <div className = "auth">
-            <h1 className="shop-title">Desert Plant Shop</h1>
+            
+            <h1 className="shop-title">Please Login</h1>
             <div className = "login-container">
                 <div className="auth-input-container">
                     <input name="username" placeholder="Username" onChange={(e) => {this.handleInput(e)}}></input>
@@ -58,9 +62,13 @@ class Auth extends Component{
                 <div className="auth-button-container">
                     <button onClick={() => {this.handleLogin()}}>Login</button>
                     <button onClick={() => {this.handleRegister()}}>Register</button>
+                    <Link to="/Cart">
+                        <button>Continue As Guest</button>
+                    </Link>
                 </div>
             </div>
 
+        </div>
         </div>
     )
     }

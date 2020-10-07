@@ -46,7 +46,7 @@ const Cart = (props) => {
            totalPrice: totalPrice(props.cart.cart)
        }
         const res = await axios.post('/stripe/checkout', body)
-        const { status } = res.dataç
+        const { status } = res.data
       
     
     }
@@ -57,7 +57,7 @@ const Cart = (props) => {
     return(
         <div>
             <Nav />
-            
+            <h2>Cart</h2>
             {mappedCart}
             
             

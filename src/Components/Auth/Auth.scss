@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Sansita+Swashed:wght@300&display=swap');
 
 $box-shadow : 0px 4px 20px 0px rgba(0, 0, 0, 0.05);
+$text-color: rgb(94,94,94);
 
 
 
@@ -11,18 +12,23 @@ $box-shadow : 0px 4px 20px 0px rgba(0, 0, 0, 0.05);
 }
 
 .auth{
-    background-image: url("https://www.jakpost.travel/wimages/large/5-57212_cactus-wallpaper-tumblr-artsy-cool-computer-backgrounds.jpg");
-    background-size: fixed;
+    background-image: url("../../images/opuntia.png");
+    
+    background-size: 60%;
     background-repeat: no-repeat;
+    background-position: 550px 110px;
     height: 100vh;
 }
+
+
 
 .shop-title{
     display: flex;
     justify-content: center;
     padding: 10px;
-    color: RGB(250, 169, 132);
+    color: $text-color;
     font-family: 'Sansita Swashed', cursive;
+    font-size: 42px;
 }
 
 
@@ -71,7 +77,7 @@ $box-shadow : 0px 4px 20px 0px rgba(0, 0, 0, 0.05);
         border-radius: 4px;
         background-color:  rgba(250, 195, 172, 1);
         font-size: 16px;
-        color: grey;
+        color: rgb(94,94,94);
         font-family: 'Open Sans', sans-serif;
 
     }

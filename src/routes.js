@@ -8,8 +8,8 @@ import Cart from './Components/Cart/Cart'
 
 export default (
     <Switch>
-        <Route exact path = "/" component ={Auth} />
-        <Route path = "/Landing" component ={Landing} />
+        <Route exact path = "/" component ={Landing} />
+        <Route path = "/Auth" component ={Auth} />
         <Route path = "/Cacti" component={Cacti} />
         <Route path = "/Succs" component={Succs} />
         <Route path = "/Cart" component={Cart} />

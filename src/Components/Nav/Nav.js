@@ -11,19 +11,19 @@ const Nav = (props) => {
     const logout = () => {
         axios.delete('/api/auth/logout').then(() => {
             props.logoutUser()
-            props.history.push('/')
+            props.history.push('/Auth')
         })
     }
 
     return(
         <div className="nav-container">
             <ul>
-                <Link to='/Landing'><li className="title-nav">Desert Plant Shop</li></Link>
+                <Link to='/'><li className="title-nav">Desert Plant Shop</li></Link>
                 <Link to="/Cacti"><li className="nav-links">Cacti</li></Link> 
                 <Link to="/Succs"><li className="nav-links">Succulents</li></Link>
                                 {/* <li>{props.user.username}</li> */}
                 <li><button className="logout-button" onClick={() => {logout()}}>Logout</button></li>
-                <Link to="/Cart"><li className="nav-links">Cart</li></Link>
+                <Link to="/Auth"><li className="nav-links">Cart</li></Link>
             </ul>
         </div>
 
