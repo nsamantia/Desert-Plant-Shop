@@ -107,4 +107,30 @@ $text-font: 'Open Sans', sans-serif;
     font-size: 16px;
 }
 
+@media only screen and(max-width: 700px){
 
+
+    .auth{
+        background-position: 160px 425px;
+
+    }
+
+    .auth-button-container{
+
+        button{
+            width: 225px;
+        }
+    }
+
+    .auth-input-container{
+
+        flex-direction: column;
+
+        input{
+            width: 225px;
+            margin: 1px;
+            margin-top: 13px;;
+        }
+        
+    }
+}

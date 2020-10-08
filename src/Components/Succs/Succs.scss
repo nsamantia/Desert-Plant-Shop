@@ -93,3 +93,10 @@ h2{
     overflow: hidden; 
     border-radius: 15px;
 }
+
+@media only screen and (max-width: 700px){
+
+    .succs-img{
+        height: 350px;
+    }
+}
