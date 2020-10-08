@@ -8,6 +8,7 @@ const cctiCtrl = require('./cactiController')
 const succCtrl = require('./succsController')
 const strpCtrl = require('./stripeController')
 const stripe = require('stripe')('SECRET_KEY');
+const path = require('path')
 
 
 // const verifyUser = require('./middlewares/verifyUser')
@@ -46,6 +47,12 @@ app.get('/api/succs', succCtrl.getSuccs)
 
 //stripe endpoints
 app.post('/stripe/checkout', strpCtrl.checkout)
+
+//Hosting
+app.use(express.static(__dirname + '/../build'))
+app.get('*', (req,res) =>{
+    res.sendFile(path.join(__dirname, '../build/index.html'))
+})
 
 massive({
     connectionString: CONNECTION_STRING,
