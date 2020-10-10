@@ -6,6 +6,7 @@ const authCtrl = require('./authController')
 const plntCtrl = require('./controller')
 const cctiCtrl = require('./cactiController')
 const succCtrl = require('./succsController')
+const prflCtrl = require('./profileController')
 const strpCtrl = require('./stripeController')
 const stripe = require('stripe')('SECRET_KEY');
 const path = require('path')
@@ -33,7 +34,9 @@ app.post('/api/auth/login', authCtrl.login)
 app.delete('/api/auth/logout', authCtrl.logout)
 app.get('/api/auth/user', authCtrl.getUser)
 
-
+//profile endpoints
+// app.get('/api/profile/username', prflCtrl.getName)
+app.put('/api/profile/edit', prflCtrl.editName)
 
 //all plants endpoints
 app.get('/api/plants', plntCtrl.getPlants)

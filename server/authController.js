@@ -57,7 +57,7 @@ module.exports = {
         res.sendStatus(200)
     },
     getUser: (req, res) => {
-        //get suer from session
+        //get user from session
 
         if(req.session.user) {
             res.status(200).send(req.session.user)
