@@ -36,7 +36,8 @@ app.get('/api/auth/user', authCtrl.getUser)
 
 //profile endpoints
 // app.get('/api/profile/username', prflCtrl.getName)
-app.put('/api/profile/edit', prflCtrl.editName)
+app.put(`/api/profile/edit`, prflCtrl.editName)
+app.get('/api/profile/info', prflCtrl.getInfo)
 
 //all plants endpoints
 app.get('/api/plants', plntCtrl.getPlants)

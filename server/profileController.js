@@ -1,16 +1,24 @@
 module.exports = {
 
     editName: async (req, res) => {
+        const db = req.app.get('db')
+        const{username} = req.body
+
         //pulls id for user from thier session
         const {id} = req.session.user
-        const{username} = req.body
-        
-        const db = req.app.get('db')
-
         // const user = await 
 
-         await db.edit_username([id, username]).then((username) => {
-            res.status(200).send(username)
-        }) .catch(err => console.log(err))
+         const [updateProfile] = await db.edit_username([id, username])
+            res.status(200).send(updateProfile)
+        
+    },
+
+    getInfo: async (req, res) => {
+        const db = req.app.get('db')
+        const {id} = req.session.user
+
+        const userInfo = await db.get_user_info(id)
+
+        res.status(200).send(userInfo)
     }
 }
