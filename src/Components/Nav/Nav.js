@@ -23,7 +23,8 @@ const Nav = (props) => {
                 <Link to="/Succs"><li className="nav-links">Succulents</li></Link>
                                 {/* <li>{props.user.username}</li> */}
                 <li><button className="logout-button" onClick={() => {logout()}}>Logout</button></li>
-                <Link to="/Auth"><li className="nav-links">Cart</li></Link>
+                <Link to="/Auth"><li className="nav-links">Profile</li></Link>
+                <Link to ="/Cart"><li className="nav-links">Cart</li></Link>
             </ul>
         </div>
 

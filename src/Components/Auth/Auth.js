@@ -42,14 +42,14 @@ class Auth extends Component{
             .post('/api/auth/login', {username, password})
             .then((res) =>{
                 this.props.loginUser(res.data)
-                this.props.history.push('/Cart/Cart')
+                this.props.history.push('/Profile/Profile')
             })
     }
 
     render(){
     return(
         <div>
-            <Nav />
+            <Nav  />
         <div className = "auth">
             
             <h1 className="shop-title">Login</h1>
@@ -66,9 +66,9 @@ class Auth extends Component{
                 <div className="auth-button-container">
                     <button onClick={() => {this.handleLogin()}}>Login</button>
                     <button onClick={() => {this.handleRegister()}}>Register</button>
-                    <Link to="/Cart">
+                    {/* <Link to="/Cart">
                         <button>Continue As Guest</button>
-                    </Link>
+                    </Link> */}
                 </div>
             </div>
 
