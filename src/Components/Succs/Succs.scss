@@ -4,6 +4,11 @@ $text-font: 'Open Sans', sans-serif;
 $font-color: rgb(91,91,91);
 $box-shadow : 0px 4px 20px 0px rgba(0, 0, 0, .1);
 
+%font{
+    font-family: $text-font;
+    color: $font-color;
+}
+
 *{
     box-sizing: border-box;
     padding: 0;
@@ -30,13 +35,11 @@ $box-shadow : 0px 4px 20px 0px rgba(0, 0, 0, .1);
 }
 
 .name-p{
-    font-family: $text-font;
-    color: $font-color
+    @extend %font
 }
 
 .price-p{
-    font-family: $text-font;
-    color: $font-color
+    @extend %font
 }
 
 .succs-img{
