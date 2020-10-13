@@ -20,7 +20,7 @@ const Cacti = () => {
     }
 
     
-    const cactiMapped = cacti.map((element) => {
+    const mappedCacti = cacti.map((element) => {
         return (
         <CactiList
         cactiListing={element}
@@ -32,15 +32,14 @@ const Cacti = () => {
         )
         })
         return(
-        <div>
-            <Nav />
-            <h2>Cacti</h2>
             <div>
-               {cactiMapped}
+                <Nav />
+                    <h2>Cacti</h2>
+                    <div className = "mapped-cacti-container">
+                                
+                        {mappedCacti}
+                    </div>
             </div>
-
-
-        </div>
         )
     
 }
