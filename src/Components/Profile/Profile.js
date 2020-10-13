@@ -15,35 +15,19 @@ const Profile = (props) => {
 
     const [editMode, setEditMode] = useState(false)
 
-    // editName = () =>{
-    //     this.setState({
-    //         editMode: !this.state.editMode
-    //     })
-    // }
+    
 
     const {username} = user
-    // handleChange(e){
-    //     this.setState({
-    //         [e.target.name]: e.target.value
-    //     })
-    // }
-    useEffect(() => {getUserInfo()}, [])
+  
+
+
+    // useEffect(() => {getUserInfo()}, [])
 
     function handleChange(e){
         const {name, value} = e.target
         setUser(state=> ({...state, [name]: value}))
     }
-    // editProfile = (username) => {
-    //     axios.put(`/api/profile/edit`, {username}).then((res) => {
-    //         this.setState({
-    //             username: res.data
-    //         })
-    //         console.log(res)
-    //         console.log(res.data)
-    //     }).catch((err) => {
-    //         console.log(err)
-    //     })
-    // }
+   
         const getUserInfo = () => {
             axios.get('/api/profile/info')
             .then(res => setUser(res.data))
@@ -76,7 +60,7 @@ const Profile = (props) => {
                     <div>
                         {(editMode) ? (
                         <div>
-                            <lable for='username'>Username:<input name="username" value={"username"}
+                            <lable for='username'>Username:<input name="username" 
                             onChange={handleChange}></input></lable>
                             <button onClick={() => {handleSubmit(username)}}>Save</button>
                         </div>
@@ -93,19 +77,6 @@ const Profile = (props) => {
 
 
 
-                {/* {this.state.name} */}
-
-                {/* {this.state.editMode? (
-                    <div>
-                        <input name="name" value={this.state.name} onChange={(e) => this.handleChange(e)}></input>
-                        <button onClick={() => this.editProfile(this.state.name)}>Save</button>
-                    </div>
-                ):(
-                    <div>
-                        <h3>{this.state.name}</h3>
-                        <button onClick={this.editName}>Edit</button>
-                    </div>
-                )} */}
                     
             </div>
         )
