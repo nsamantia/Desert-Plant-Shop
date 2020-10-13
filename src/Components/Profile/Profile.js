@@ -27,7 +27,7 @@ const Profile = (props) => {
     //         [e.target.name]: e.target.value
     //     })
     // }
-    // useEffect(() => {getUserInfo()}, [])
+    useEffect(() => {getUserInfo()}, [])
 
     function handleChange(e){
         const {name, value} = e.target
