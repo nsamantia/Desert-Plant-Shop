@@ -50,24 +50,27 @@ const Profile = (props) => {
 
 
                     <div>
-                        {(editMode) ? (<div>
-                            <button onClick={() => setEditMode(!editMode)}>Cancel</button>
-                        </div>) : (<div>
-                            <button onClick={() => setEditMode(!editMode)}>Edit</button>
-                        </div>)}
+                        {(editMode) ? (
+                            <div>
+                                <button onClick={() => setEditMode(!editMode)}>Cancel</button>
+                            </div>
+                        ):(
+                            <div>
+                                <button onClick={() => setEditMode(!editMode)}>Edit</button>
+                            </div>)}
                     </div>
 
                     <div>
                         {(editMode) ? (
-                        <div>
-                            <lable for='username'>Username:<input name="username" 
-                            onChange={handleChange}></input></lable>
-                            <button onClick={() => {handleSubmit(username)}}>Save</button>
-                        </div>
+                            <div>
+                                <lable for='username'>Username:<input name="username" 
+                                    onChange={handleChange}></input></lable>
+                                <button onClick={() => {handleSubmit(username)}}>Save</button>
+                            </div>
                         ):(
-                        <div>
-                            <label for="">username: <p>{username}</p></label>
-                        </div>)}
+                            <div>
+                                <label for="">username: <p>{username}</p></label>
+                            </div>)}
                     </div>
 
 
