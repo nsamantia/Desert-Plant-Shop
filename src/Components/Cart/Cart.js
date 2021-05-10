@@ -1,15 +1,9 @@
 import React from 'react';
 import Nav from '../Nav/Nav';
-
 import { connect } from 'react-redux';
 import CartList from './CartList';
-
-import { loadStripe } from '@stripe/stripe-js';
 import StripeCheckout from 'react-stripe-checkout';
 import axios from 'axios';
-const stripePromise = loadStripe(
-  'pk_test_51HXYqjDeUNmgXOYnaq5czks1BtAJRANDHTRxbBwz3MPWX3KcEDXZgkKH4qNaR2ggaYDx1B60jWIMoSpHOgqGvvq600blttLjhI'
-);
 
 const Cart = (props) => {
   const mappedCart = props.cart.cart.map((element) => {

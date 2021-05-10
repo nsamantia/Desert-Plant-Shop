@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import './Landing.scss';
 import { connect } from 'react-redux';
 import { getUser } from '../../ducks/authReducer';
